@@ -1,0 +1,37 @@
+server:
+  port: 8050
+
+spring:
+  application:
+    name: system
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/tscm?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+      username: root
+      password: 123456789
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+
+
+#eureka:
+#  instance:
+#    instance-id: system #主机名的修改
+#    prefer-ip-address: true #显示ip,可以帮助定位问题
+#  client:
+#    registerWithEureka: true
+#    fetchRegistry: true
+#    serviceUrl:
+#      defaultZone: http://localhost:8760/eureka/,http://localhost:8770/eureka/
+
+
+#eureka:
+#  instance:
+#    instance-id: system.one  #主机名的修改
+#    prefer-ip-address: true #显示ip,可以帮助定位问题
+#  client:
+#    registerWithEureka: true
+#    fetchRegistry: true
+#    serviceUrl:
+#      defaultZone: http://localhost:8760/eureka/,http://localhost:8770/eureka/
