@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.psh.mapper.TscmUserMapper">
+
+    <sql id="table_field">
+      id, account, username, user_department, user_mailbox, user_description, login, tenant_id, deleted, ctime, crname, mtime, chname, session_id    </sql>
+    <!--分页查询-->
+    <select id="listByPage" resultType="com.psh.entity.response.ResTscmUser">
+            select * from tscm_user
+            where deleted = 0
+                <if test="null != param.account and ''!= param.account">
+           and account like '%'||#{param.account}||'%'        </if>
+                 <if test="null != param.username and ''!= param.username">
+           and username like '%'||#{param.username}||'%'        </if>
+                 <if test="null != param.userDepartment and ''!= param.userDepartment">
+           and user_department like '%'||#{param.userDepartment}||'%'        </if>
+                 <if test="null != param.userMailbox and ''!= param.userMailbox">
+           and user_mailbox like '%'||#{param.userMailbox}||'%'        </if>
+                 <if test="null != param.userDescription and ''!= param.userDescription">
+           and user_description like '%'||#{param.userDescription}||'%'        </if>
+                 <if test="null != param.login">
+           and login  = #{param.login}        </if>
+                                         <if test="null != param.sessionId and ''!= param.sessionId">
+           and session_id like '%'||#{param.sessionId}||'%'        </if>
+                 
+        </select>
+</mapper>
