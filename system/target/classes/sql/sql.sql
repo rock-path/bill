@@ -48,3 +48,14 @@ CREATE TABLE `bill_income` (
 ) ENGINE=InnoDB AUTO_INCREMENT=317 DEFAULT CHARSET=utf8 COMMENT='收入表'
 
 
+CREATE TABLE `important_events` (
+                               `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键id',
+                               `important_time` timestamp NULL DEFAULT NULL COMMENT '事件时间,年月',
+                               `important_descd` varchar(2048) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '事件描述',
+                               `deleted` varchar(1) DEFAULT '0' COMMENT '删除标记',
+                               `ctime` timestamp NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+                               `crname` varchar(32) DEFAULT NULL COMMENT '创建人',
+                               `mtime` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+                               `chname` varchar(32) DEFAULT NULL COMMENT '更新人',
+                               PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=323 DEFAULT CHARSET=utf8 COMMENT='重要事件'

@@ -17,8 +17,8 @@ import javax.validation.constraints.NotNull;
 
 /**
 * @Author makejava
-* @Date 2022-01-28
-* @Time 21:26:26
+* @Date 2022-01-29
+* @Time 21:39:20
 *收入表持久层
 */
 @Mapper

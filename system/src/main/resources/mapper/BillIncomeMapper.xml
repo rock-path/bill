@@ -3,19 +3,21 @@
 <mapper namespace="com.psh.mapper.BillIncomeMapper">
 
     <sql id="table_field">
-      id, i_time, i_number, desc, deleted, ctime, crname, mtime, chname, session_id    </sql>
+        id
+        , i_time, i_number, descd, deleted, ctime, crname, mtime, chname    </sql>
     <!--分页查询-->
     <select id="listByPage" resultType="com.psh.entity.response.ResBillIncome">
-            select * from bill_income
-            where deleted = 0
-                <if test="null != param.iTime and ''!= param.iTime">
-           and i_time like '%'||#{param.iTime}||'%'        </if>
-                 <if test="null != param.iNumber and ''!= param.iNumber">
-           and i_number like '%'||#{param.iNumber}||'%'        </if>
-                 <if test="null != param.desc and ''!= param.desc">
-           and desc like '%'||#{param.desc}||'%'        </if>
-                                     <if test="null != param.sessionId and ''!= param.sessionId">
-           and session_id like '%'||#{param.sessionId}||'%'        </if>
-                 
-        </select>
+        select * from bill_income
+        where deleted = 0
+        <if test="null != param.iTime">
+            and i_time = #{param.iTime}
+        </if>
+        <if test="null != param.iNumber and ''!= param.iNumber">
+            and i_number like '%'||#{param.iNumber}||'%'
+        </if>
+        <if test="null != param.descd and ''!= param.descd">
+            and descd like '%'||#{param.descd}||'%'
+        </if>
+
+    </select>
 </mapper>

@@ -15,7 +15,7 @@
     "comment" : null,
     "type" : null,
     "shortType" : null,
-    "ktShortType" : "String",
+    "ktShortType" : "Date",
     "custom" : false,
     "ext" : { }
   }, {
@@ -27,7 +27,7 @@
     "custom" : false,
     "ext" : { }
   }, {
-    "name" : "desc",
+    "name" : "descd",
     "comment" : null,
     "type" : null,
     "shortType" : null,
@@ -68,14 +68,6 @@
     "ext" : { }
   }, {
     "name" : "chname",
-    "comment" : null,
-    "type" : null,
-    "shortType" : null,
-    "ktShortType" : "String",
-    "custom" : false,
-    "ext" : { }
-  }, {
-    "name" : "sessionId",
     "comment" : null,
     "type" : null,
     "shortType" : null,
