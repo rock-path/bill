@@ -7,11 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-/**
- * @author softstone71.hik.
- * @DATE 2021/9/24.
- * @time 11:03.
- */
+
 @Data
 public class UserInfo {
     /**

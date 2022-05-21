@@ -42,4 +42,9 @@ public class ResImportantEvents implements Serializable {
     @ApiModelProperty(value = "事件描述", name = "importantDescd")
     private String importantDescd;
 
+    /**
+     * 事件概要
+     */
+    @ApiModelProperty(value = "事件概要", name = "summary")
+    private String summary;
 }

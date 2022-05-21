@@ -1,8 +1,10 @@
 package com.psh.entity;
 
 
+import java.io.Serializable;
 import java.util.Date;
 
+import com.psh.hik.entity.BaseEntity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -21,7 +23,7 @@ import org.springframework.format.annotation.DateTimeFormat;
  */
 @Data
 @ApiModel(value = "ImportantEvents对象", description = "重要事件实体对象")
-public class ImportantEvents {
+public class ImportantEvents extends BaseEntity implements Serializable {
 
     /**
      * 事件时间,年月
@@ -44,5 +46,11 @@ public class ImportantEvents {
     @TableLogic
     @TableField(value = "DELETED", fill = FieldFill.INSERT, jdbcType = JdbcType.VARCHAR)
     private String deleted;
+
+    /**
+     * 事件概要
+     */
+    @ApiModelProperty(value = "事件概要", name = "summary")
+    private String summary;
 
 }

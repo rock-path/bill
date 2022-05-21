@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.psh.mapper.BillLogsMapper">
+
+    <sql id="table_field">
+      #allSqlColumn()
+    </sql>
+    <!--分页查询-->
+    <select id="listByPage" resultType="com.psh.entity.response.ResBillLogs">
+            select * from bill_logs
+            where deleted = 0
+                                    <if test="null != param.uuid and ''!= param.uuid">
+           and uuid like '%'||#{param.uuid}||'%'        </if>
+                 <if test="null != param.logResourceId">
+           and log_resource_id  = #{param.logResourceId}        </if>
+                 <if test="null != param.before and ''!= param.before">
+           and before like '%'||#{param.before}||'%'        </if>
+                 <if test="null != param.after and ''!= param.after">
+           and after like '%'||#{param.after}||'%'        </if>
+                 <if test="null != param.logs and ''!= param.logs">
+           and logs like '%'||#{param.logs}||'%'        </if>
+                 <if test="null != param.ip and ''!= param.ip">
+           and ip like '%'||#{param.ip}||'%'        </if>
+                 <if test="null != param.user and ''!= param.user">
+           and user like '%'||#{param.user}||'%'        </if>
+                 
+        </select>
+</mapper>

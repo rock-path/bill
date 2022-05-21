@@ -44,19 +44,7 @@ public class ImportantEventsController {
     public BaseResultModel getById(@RequestParam("id") Long id) {
         return importantEventsService.getOneById(id);
     }
-    
-    /**
-     * 新增
-     *
-     * @param req 实体类
-     * @return BaseResultModel对象
-     */
-    @PostMapping(value = "/add")
-    @ApiOperation(value="新增重要事件")
-    public BaseResultModel insert(@RequestBody ReqImportantEventsAdd req) {
-        return importantEventsService.insert(req);
-    }
-    
+
     /**
      * 修改
      *
@@ -71,22 +59,6 @@ public class ImportantEventsController {
         return importantEventsService.update(id, req);
     }
     
-    /**
-     * 分页查询
-     *
-     * @param req 实体类
-     * @return BaseResultModel对象
-     */
-    @ApiOperation(value = "分页查询目录管理")
-    @ApiImplicitParams({
-        @ApiImplicitParam(name="pageNum",value="页码",dataType="Integer", paramType = "query"),
-        @ApiImplicitParam(name="pageSize",value="条数",dataType="Integer", paramType = "query")
-    })
-    @GetMapping("/list")
-    public BaseResultModel<IPage<ResImportantEvents>> list(ReqImportantEventsQuery req, @RequestParam("pageNum") int pageNum, @RequestParam("pageSize") int pageSize) {
-        Page<ResImportantEvents> page = new Page<>(pageNum,pageSize);
-        return importantEventsService.page(page,req);
-    }
 
     /**
      * 单个删除
@@ -124,5 +96,38 @@ public class ImportantEventsController {
         query.eq("deleted", "0");
         return BaseResultModel.success(importantEventsService.list(query));
     }
+
+
+
+    /**
+     * 新增
+     *
+     * @param req 实体类
+     * @return BaseResultModel对象
+     */
+    @PostMapping(value = "/add")
+    @ApiOperation(value="新增重要事件")
+    public BaseResultModel insert(@RequestBody ReqImportantEventsAdd req) {
+        return importantEventsService.insert(req);
+    }
+
+
+    /**
+     * 分页查询
+     *
+     * @param req 实体类
+     * @return BaseResultModel对象
+     */
+    @ApiOperation(value = "重要事件分页查询")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name="pageNum",value="页码",dataType="Integer", paramType = "query"),
+            @ApiImplicitParam(name="pageSize",value="条数",dataType="Integer", paramType = "query")
+    })
+    @GetMapping("/list")
+    public BaseResultModel<IPage<ResImportantEvents>> list(ReqImportantEventsQuery req, @RequestParam("pageNum") int pageNum, @RequestParam("pageSize") int pageSize) {
+        Page<ResImportantEvents> page = new Page<>(pageNum,pageSize);
+        return importantEventsService.page(page,req);
+    }
+
 
 }

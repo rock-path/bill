@@ -2,11 +2,7 @@ package com.psh.hik.domain;
 
 import java.io.Serializable;
 
-/**
- * @author softstone71.hik.
- * @DATE 2021/9/24.
- * @time 10:46.
- */
+
 public class BaseResultModel<T> implements Serializable {
 
     public static final String NAME = "resultModel";

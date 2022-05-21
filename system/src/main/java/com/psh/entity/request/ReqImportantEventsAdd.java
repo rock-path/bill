@@ -29,7 +29,7 @@ public class ReqImportantEventsAdd implements Serializable {
      */
     @ApiModelProperty(value = "事件时间,年月", name = "importantTime")
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-//    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date importantTime;
 
     /**
@@ -37,5 +37,13 @@ public class ReqImportantEventsAdd implements Serializable {
      */
     @ApiModelProperty(value = "事件描述", name = "importantDescd")
     private String importantDescd;
+
+    /**
+     * 事件概要
+     */
+    @ApiModelProperty(value = "事件概要", name = "summary")
+    private String summary;
+
+
 
 }

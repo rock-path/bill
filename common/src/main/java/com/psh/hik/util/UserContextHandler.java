@@ -3,9 +3,6 @@ package com.psh.hik.util;
 import com.psh.hik.common.UserInfo;
 
 /**
- * @author softstone71.hik.
- * @DATE 2021/9/24.
- * @time 11:06.
  * * 用户工具类
  */
 public class UserContextHandler {

@@ -1,5 +1,8 @@
 server:
+  servlet:
+    context-path: /api
   port: 9000
+
 
 spring:
   redis:
@@ -34,8 +37,6 @@ spring:
 #        server-addr: 192.168.158.135:8848 #配置中心
 #        namespace: 1594f901-f5d5-41f1-a21c-f0fba62ffe13
 #        file-extension: yaml
-
-
 
 
 mybatis-plus:

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.psh.mapper.BillLogResourceMapper">
+
+    <sql id="table_field">
+        #allSqlColumn
+        ()
+    </sql>
+    <!--分页查询-->
+    <select id="listByPage" resultType="com.psh.entity.response.ResBillLogResource">
+        select * from bill_log_resource
+        where deleted = 0
+        <if test="null != param.resource and ''!= param.resource">
+            and resource like '%'||#{param.resource}||'%'
+        </if>
+        <if test="null != param.requestMode and ''!= param.requestMode">
+            and request_mode like '%'||#{param.requestMode}||'%'
+        </if>
+        <if test="null != param.action and ''!= param.action">
+            and action = #{param.action}
+        </if>
+        <if test="null != param.described and ''!= param.described">
+            and described like '%'||#{param.described}||'%'
+        </if>
+        <if test="null != param.entity and ''!= param.entity">
+            and entity like '%'||#{param.entity}||'%'
+        </if>
+        <if test="null != param.modules and ''!= param.modules">
+            and modules = #{param.modules}
+        </if>
+    </select>
+</mapper>

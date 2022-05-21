@@ -3,11 +3,7 @@ package com.psh.hik.common;
 
 import org.apache.commons.lang3.StringUtils;
 
-/**
- * @author softstone71.hik.
- * @DATE 2021/9/24.
- * @time 14:10.
- */
+
 public enum ResultStatus {
 
     SUCCESS("0", "执行成功"),
