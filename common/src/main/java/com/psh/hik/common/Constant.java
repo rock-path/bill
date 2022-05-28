@@ -15,4 +15,15 @@ public class Constant {
     public static String SYSTEMURL = "system_url";
     public static String GATEWAYURL = "gateway_url";
 
+    public static String SOFTWARENAME = "softwareName";
+    public static String SOFTWAREFAIL = "软件名称为空";
+
+    public static String ACCOUNT = "account";
+
+    public static String ACCOUNTFAIL = "账号为空";
+
+    public static String PASSWORD = "password";
+
+    public static String PASSWORDFAIL = "密码为空";
+
 }

@@ -13,6 +13,7 @@
         <module>eureka</module>
         <module>gateway</module>
         <module>Listen_es</module>
+        <module>Important-data</module>
     </modules>
 
     <packaging>pom</packaging>

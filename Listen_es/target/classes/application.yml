@@ -1,0 +1,49 @@
+server:
+  port: 7000
+
+spring:
+  data:
+    elasticsearch:
+#      cluster-nodes: localhost:9200
+  application:
+    name: es-8.0
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://192.168.158.134:3306/bill?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+      username: root
+      password: psh120370
+  cloud:
+    nacos:
+      discovery:
+        server-addr: http://192.168.158.135:8848
+        namespace: 1594f901-f5d5-41f1-a21c-f0fba62ffe13
+#      config:
+#        server-addr: 192.168.158.135:8848 #配置中心
+#        namespace: 1594f901-f5d5-41f1-a21c-f0fba62ffe13
+#        file-extension: yaml
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+
+
+#eureka:
+#  instance:
+#    instance-id: es #主机名的修改
+#    prefer-ip-address: true #显示ip,可以帮助定位问题
+#  client:
+#    registerWithEureka: true
+#    fetchRegistry: true
+#    serviceUrl:
+#      defaultZone: http://localhost:8760/eureka/,http://localhost:8770/eureka/
+
+elasticsearch:
+  host: 192.168.158.146
+  port: 9200
+
+es:
+  port: 9200
+  host: 192.168.158.146
+#
+#logging:
+#  level: debug
