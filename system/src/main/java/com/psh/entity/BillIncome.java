@@ -35,13 +35,12 @@ public class BillIncome {
      * 金额
      */
     @ApiModelProperty(value = "金额", name = "iNumber")
-    private String iNumber;
+    private  String iNumber;
 
     /**
      * 描述
      */
     @ApiModelProperty(value = "描述", name = "descd")
-    private String descd;
-
+    private  String descd;
 
 }

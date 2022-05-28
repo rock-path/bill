@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.psh.entity.BillLogResource;
 import com.psh.entity.BillRequestUrl;
 import com.psh.hik.common.Constant;
+import com.psh.hik.util.RedisSync;
 import com.psh.log.LogConstant;
 import com.psh.mapper.BillLogResourceMapper;
 import com.psh.mapper.BillRequestUrlMapper;
@@ -20,6 +21,9 @@ import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
+
+import static com.psh.log.LogConstant.SYNC1;
+import static com.psh.log.LogConstant.SYNC2;
 
 @Component
 @EnableScheduling   // 2.开启定时任务
@@ -40,14 +44,16 @@ public class ScheduledTask {
     //或直接指定时间间隔
     //@Scheduled(fixedRate=5000)
     private void configureTasks() {
-        logger.info("定时任务：获取url访问记录--------》》开始");
-        List<String> list = new ArrayList<>();
-        list.add(Constant.GATEWAYURL);
-        list.add(Constant.SYSTEMURL);
-        for (String ss : list) {
-            savr(ss);
+        if (RedisSync.getRedisLock(redisTemplate, SYNC1, 1, 180 * 1000)) {
+            logger.info("定时任务：获取url访问记录--------》》开始");
+            List<String> list = new ArrayList<>();
+            list.add(Constant.GATEWAYURL);
+            list.add(Constant.SYSTEMURL);
+            for (String ss : list) {
+                savr(ss);
+            }
+            logger.info("定时任务：获取url访问记录--------》》结束");
         }
-        logger.info("定时任务：获取url访问记录--------》》结束");
     }
 
     private void savr(String ss) {
@@ -68,20 +74,22 @@ public class ScheduledTask {
     //或直接指定时间间隔
     //@Scheduled(fixedRate=5000)
     private void logResource() {
-        long startTime = System.currentTimeMillis();
-        logger.info("定时任务：同步需要记录操作日志的静态资源--------》》开始");
-        QueryWrapper<BillLogResource> queryWrapper = new QueryWrapper();
-        List<BillLogResource> list = billLogResourceMapper.selectList(queryWrapper);
-        redisTemplate.delete(LogConstant.LOGS);
-        for (BillLogResource billLogResource : list) {
-            if (billLogResource.getDeleted().equals("1")) {
-                redisTemplate.opsForHash().delete(LogConstant.LOGS, billLogResource.getId());
-            } else {
-                redisTemplate.opsForHash().put(LogConstant.LOGS, billLogResource.getId(), JSONUtil.toJsonStr(billLogResource));
+        if (RedisSync.getRedisLock(redisTemplate, SYNC2, 1, 180 * 1000)) {
+            long startTime = System.currentTimeMillis();
+            logger.info("定时任务：同步需要记录操作日志的静态资源--------》》开始");
+            QueryWrapper<BillLogResource> queryWrapper = new QueryWrapper();
+            List<BillLogResource> list = billLogResourceMapper.selectList(queryWrapper);
+            redisTemplate.delete(LogConstant.LOGS);
+            for (BillLogResource billLogResource : list) {
+                if (billLogResource.getDeleted().equals("1")) {
+                    redisTemplate.opsForHash().delete(LogConstant.LOGS, billLogResource.getId());
+                } else {
+                    redisTemplate.opsForHash().put(LogConstant.LOGS, billLogResource.getId(), JSONUtil.toJsonStr(billLogResource));
+                }
             }
+            long endTime = System.currentTimeMillis() - startTime;
+            logger.info("定时任务：同步需要记录操作日志的静态资源--------》》结束,耗时" + endTime + "ms");
         }
-        long endTime = System.currentTimeMillis() - startTime;
-        logger.info("定时任务：同步需要记录操作日志的静态资源--------》》结束,耗时" + endTime + "ms");
     }
 
 

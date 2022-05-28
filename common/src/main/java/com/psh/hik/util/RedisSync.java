@@ -48,7 +48,7 @@ public class RedisSync {
      * @param redisTimeout redis锁超时时间，单位分钟
      * @return boolean true:获取到锁,false:未获取到锁
      */
-    public static boolean getRedisLock(RedisTemplate<String, String> redisTemplate, String redisLockKey, int timeout, int redisTimeout) {
+    public static boolean getRedisLock(RedisTemplate<String, Object> redisTemplate, String redisLockKey, int timeout, int redisTimeout) {
         try {
 //            int sleepMiniTime = 100; // 循环等待最小间隔时间
 //            if(timeout < 100){
