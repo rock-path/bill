@@ -74,7 +74,6 @@ public class BillPasswordServiceImpl extends ServiceImpl<BillPasswordMapper, Bil
             throw new BaseException(ResultStatus.NO_RECORDS.getCode(), ResultStatus.NO_RECORDS.getMessage());
         }
         BeanUtil.copyProperties(req, exist);
-
         if (!this.updateById(exist)) {
             throw new BaseException(ResultStatus.UPDATE_FAIL.getCode(), ResultStatus.UPDATE_FAIL.getMessage());
         }
@@ -103,6 +102,13 @@ public class BillPasswordServiceImpl extends ServiceImpl<BillPasswordMapper, Bil
 
     }
 
+    /**
+     * 分页查询，解密，分页等操作
+     *
+     * @param page
+     * @param req
+     * @return
+     */
     @Override
     @Transactional(readOnly = true)
     public BaseResultModel<IPage<ResBillPassword>> page(Page<ResBillPassword> page, ReqBillPasswordQuery req) {
@@ -112,22 +118,55 @@ public class BillPasswordServiceImpl extends ServiceImpl<BillPasswordMapper, Bil
         Map<String, String> map = EntityUtils.isNotBlank(bi);
         //不需要通过加密字段来查询
         if (map == null) {
-            List<ResBillPassword> res = mapper.listByPage(page, req);
-            //解密
-            if (res != null && res.size() > 0) {
-                for (ResBillPassword re : res) {
-                    EntityUtils.decryption(re, key);
-                }
-            }
-            page.setRecords(res);
-            return BaseResultModel.success(page);
+            return notSearch(page, req);
         }
+        return search(page, req, map);
+
+    }
+
+    /**
+     * 不需要用加密字段来查询的情况
+     *
+     * @param page
+     * @param req
+     * @return
+     */
+    private BaseResultModel notSearch(Page<ResBillPassword> page, ReqBillPasswordQuery req) {
+        List<ResBillPassword> res = mapper.listByPage(page, req);
+        //解密
+        if (res != null && res.size() > 0) {
+            for (ResBillPassword re : res) {
+                EntityUtils.decryption(re, key);
+            }
+        }
+        page.setRecords(res);
+        return BaseResultModel.success(page);
+    }
+
+    /**
+     * 需要用加密字段查询
+     *
+     * @param page
+     * @param req
+     * @return
+     */
+    private BaseResultModel search(Page<ResBillPassword> page, ReqBillPasswordQuery req, Map<String, String> map) {
+        List<ResBillPassword> res = mapper.listAll(req);
+        //解密
+        if (res != null && res.size() > 0) {
+            for (ResBillPassword re : res) {
+                EntityUtils.decryption(re, key);
+            }
+        }
+        //筛选
+        res = EntityUtils.serch(res, map);
         //分页
         Long pageNum = page.getCurrent();
         Long pageSize = page.getSize();
 
-        //筛选
-
-        return null;
+        page.setRecords(res);
+        page.setTotal(res.size());
+        return BaseResultModel.success(page);
     }
+
 }

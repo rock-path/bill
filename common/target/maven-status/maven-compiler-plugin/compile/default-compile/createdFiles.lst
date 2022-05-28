@@ -1,3 +1,5 @@
+com\psh\hik\entity\BaseEntity.class
+com\psh\hik\util\RedisSync.class
 com\psh\hik\common\ResultStatus.class
 com\psh\hik\common\Constant.class
 com\psh\hik\domain\BaseException.class
