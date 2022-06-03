@@ -2,6 +2,11 @@ server:
   servlet:
     context-path: /api
   port: 9010
+  tomcat:
+      # -1 表示不限制请求大小
+      # 单位是字节 byte
+      max-http-form-post-size: -1
+
 
 
 spring:
@@ -41,6 +46,10 @@ spring:
         server-addr: 192.168.158.135:8848 #配置中心
         namespace: 1594f901-f5d5-41f1-a21c-f0fba62ffe13
         file-extension: yaml
+  servlet:
+    multipart:
+      max-file-size: 2000MB
+      max-request-size: 2500MB
 
 
 mybatis-plus:
@@ -48,6 +57,7 @@ mybatis-plus:
 
 aes:
   password: isTrueLoveColour
+
 
 #eureka:
 #  instance:

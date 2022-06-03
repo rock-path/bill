@@ -1,6 +1,7 @@
 package com.psh.entity.request;
 
 
+import com.mysql.cj.jdbc.Blob;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 

@@ -4,7 +4,12 @@ server:
   port: 9000
 
 
+
 spring:
+  servlet:
+    multipart:
+      max-file-size: 300MB
+      max-request-size: 300MB
   redis:
     host: 192.168.158.130
     port: 6379
@@ -41,6 +46,7 @@ spring:
 
 mybatis-plus:
   mapper-locations: classpath:/mapper/*Mapper.xml
+
 
 
 #eureka:

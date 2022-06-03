@@ -26,4 +26,10 @@ public class Constant {
 
     public static String PASSWORDFAIL = "密码为空";
 
+    public static String FILE = "file";
+
+    public static String FILEHOME = "H:\\upload";
+
+    public static String FILEURL = "http://localhost:9000/api/seeFile/";
+
 }
