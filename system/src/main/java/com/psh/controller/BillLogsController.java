@@ -1,12 +1,14 @@
 package com.psh.controller;
 
 import com.psh.entity.BillLogs;
+import com.psh.entity.BillRecord;
 import com.psh.entity.request.ReqBillLogsAdd;
 import com.psh.entity.request.ReqBillLogsUpdate;
 import com.psh.entity.request.ReqBillLogsQuery;
 import com.psh.entity.response.ResBillLogs;
 import com.psh.hik.domain.BaseResultModel;
 import com.psh.service.BillLogsService;
+import com.psh.util.Export;
 import org.springframework.web.bind.annotation.*;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -16,6 +18,10 @@ import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
+
+import javax.servlet.http.HttpServletResponse;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.List;
 
 /**
@@ -123,6 +129,19 @@ public class BillLogsController {
         QueryWrapper<BillLogs> query = new QueryWrapper<>();
         query.eq("deleted", "0");
         return BaseResultModel.success(billLogsService.list(query));
+    }
+
+
+    @GetMapping("/exportData")
+    public void exportData(HttpServletResponse response) {
+        // 查询数据信息
+        List<BillLogs> list = billLogsService.list();
+        try {
+            String fileName = URLEncoder.encode("操作日志列表","UTF-8");
+            Export.exportExcel(response,fileName, list,BillLogs.class);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
     }
 
 }

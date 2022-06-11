@@ -22,7 +22,7 @@
             and r_number like '%'||#{param.rNumber}||'%'
         </if>
         <if test="null != param.desc and ''!= param.desc">
-            and desc like '%'||#{param.desc}||'%'
+            and descd like '%'||#{param.desc}||'%'
         </if>
         <if test="null != param.sessionId and ''!= param.sessionId">
             and session_id like '%'||#{param.sessionId}||'%'

@@ -52,7 +52,7 @@ public class ResBillRecord implements Serializable{
     * 描述
     */    
     @ApiModelProperty(value="描述",name="desc")
-    private String desc;
+    private String descd;
                              
         /**
     * 用户判断当前用户是否重复登录

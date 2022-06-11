@@ -1,11 +1,13 @@
 package com.psh.controller;
 
 import com.psh.entity.BillIncome;
+import com.psh.entity.BillLogResource;
 import com.psh.entity.request.ReqBillIncomeAdd;
 import com.psh.entity.request.ReqBillIncomeUpdate;
 import com.psh.entity.request.ReqBillIncomeQuery;
 import com.psh.entity.response.ResBillIncome;
 import com.psh.service.BillIncomeService;
+import com.psh.util.Export;
 import org.springframework.web.bind.annotation.*;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -16,6 +18,10 @@ import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
+
+import javax.servlet.http.HttpServletResponse;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.List;
 
 /**
@@ -124,5 +130,18 @@ public class BillIncomeController {
         query.eq("deleted", "0");
         return BaseResultModel.success(billIncomeService.list(query));
     }
+
+    @GetMapping("/exportData")
+    public void exportData(HttpServletResponse response) {
+        // 查询数据信息
+        List<BillIncome> list = billIncomeService.list();
+        try {
+            String fileName = URLEncoder.encode("收入列表","UTF-8");
+            Export.exportExcel(response,fileName, list,BillIncome.class);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 }

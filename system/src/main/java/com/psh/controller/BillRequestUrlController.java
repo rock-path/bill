@@ -1,11 +1,13 @@
 package com.psh.controller;
 
 import com.psh.entity.BillRequestUrl;
+import com.psh.entity.BillType;
 import com.psh.entity.request.ReqBillRequestUrlAdd;
 import com.psh.entity.request.ReqBillRequestUrlUpdate;
 import com.psh.entity.request.ReqBillRequestUrlQuery;
 import com.psh.entity.response.ResBillRequestUrl;
 import com.psh.service.BillRequestUrlService;
+import com.psh.util.Export;
 import org.springframework.web.bind.annotation.*;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -16,6 +18,10 @@ import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
+
+import javax.servlet.http.HttpServletResponse;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.List;
 
 /**
@@ -123,6 +129,18 @@ public class BillRequestUrlController {
         QueryWrapper<BillRequestUrl> query = new QueryWrapper<>();
         query.eq("deleted", "0");
         return BaseResultModel.success(billRequestUrlService.list(query));
+    }
+
+    @GetMapping("/exportData")
+    public void exportData(HttpServletResponse response) {
+        // 查询数据信息
+        List<BillRequestUrl> list = billRequestUrlService.list();
+        try {
+            String fileName = URLEncoder.encode("访问url记录列表","UTF-8");
+            Export.exportExcel(response,fileName, list,BillRequestUrl.class);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
     }
 
 }

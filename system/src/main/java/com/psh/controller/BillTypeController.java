@@ -1,11 +1,13 @@
 package com.psh.controller;
 
 import com.psh.entity.BillType;
+import com.psh.entity.ImportantEvents;
 import com.psh.entity.request.ReqBillTypeAdd;
 import com.psh.entity.request.ReqBillTypeUpdate;
 import com.psh.entity.request.ReqBillTypeQuery;
 import com.psh.entity.response.ResBillType;
 import com.psh.service.BillTypeService;
+import com.psh.util.Export;
 import org.springframework.web.bind.annotation.*;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -16,6 +18,10 @@ import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
+
+import javax.servlet.http.HttpServletResponse;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.List;
 
 /**
@@ -123,6 +129,18 @@ public class BillTypeController {
         QueryWrapper<BillType> query = new QueryWrapper<>();
         query.eq("deleted", "0");
         return BaseResultModel.success(billTypeService.list(query));
+    }
+
+    @GetMapping("/exportData")
+    public void exportData(HttpServletResponse response) {
+        // 查询数据信息
+        List<BillType> list = billTypeService.list();
+        try {
+            String fileName = URLEncoder.encode("事件类型列表","UTF-8");
+            Export.exportExcel(response,fileName, list,BillType.class);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
     }
 
 }

@@ -6,6 +6,7 @@ import com.psh.entity.request.ReqImportantEventsUpdate;
 import com.psh.entity.request.ReqImportantEventsQuery;
 import com.psh.entity.response.ResImportantEvents;
 import com.psh.service.ImportantEventsService;
+import com.psh.util.Export;
 import org.springframework.web.bind.annotation.*;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -16,6 +17,10 @@ import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
+
+import javax.servlet.http.HttpServletResponse;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.List;
 
 /**
@@ -127,6 +132,19 @@ public class ImportantEventsController {
     public BaseResultModel<IPage<ResImportantEvents>> list(ReqImportantEventsQuery req, @RequestParam("pageNum") int pageNum, @RequestParam("pageSize") int pageSize) {
         Page<ResImportantEvents> page = new Page<>(pageNum,pageSize);
         return importantEventsService.page(page,req);
+    }
+
+    //返回值需要是void
+    @GetMapping("/exportData")
+    public void exportData(HttpServletResponse response) {
+        // 查询数据信息
+        List<ImportantEvents> list = importantEventsService.list();
+        try {
+            String fileName = URLEncoder.encode("重要事件列表","UTF-8");
+            Export.exportExcel(response,fileName, list,ImportantEvents.class);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
     }
 
 
