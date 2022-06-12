@@ -40,7 +40,7 @@ public class ScheduledTask {
     @Resource
     private BillLogResourceMapper billLogResourceMapper;
 
-    @Scheduled(cron = "0 */1 * * * ?")
+    @Scheduled(cron = "0 0/1 * * * ?")
     //或直接指定时间间隔
     //@Scheduled(fixedRate=5000)
     private void configureTasks() {
