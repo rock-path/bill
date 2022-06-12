@@ -8,9 +8,7 @@ import com.psh.entity.request.ReqBillPasswordExtendQuery;
 import com.psh.entity.response.ResBillPasswordExtend;
 import com.psh.hik.domain.BaseResultModel;
 import com.psh.service.BillPasswordExtendService;
-import lombok.val;
-import org.apache.commons.io.FilenameUtils;
-import org.springframework.util.FileCopyUtils;
+
 import org.springframework.web.bind.annotation.*;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -20,9 +18,7 @@ import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.MultipartHttpServletRequest;
-import sun.misc.BASE64Decoder;
+
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.*;

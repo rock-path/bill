@@ -8,6 +8,7 @@ public class Constant {
     public static String CH4 = "\"";
     public static String CH5 = "[";
     public static String CH6 = "]";
+    public static String CH7 = ":";
 
     public static String USER = "bill_user_list";
 
@@ -31,5 +32,8 @@ public class Constant {
     public static String FILEHOME = "H:\\upload";
 
     public static String FILEURL = "http://localhost:9000/api/seeFile/";
+
+
+    public static String FILEURLLINUX = "http://192.168.158.130:9000/api/seeFile/";
 
 }

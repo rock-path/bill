@@ -10,16 +10,15 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
 import javax.servlet.ServletOutputStream;
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URLEncoder;
-import java.util.UUID;
 
 import static com.psh.hik.common.Constant.*;
+import static com.psh.hik.common.Constant.FILEURLLINUX;
 
 @RestController()
 @RequestMapping("/file")
@@ -54,6 +53,9 @@ public class FileController {
         return BaseResultModel.success();
     }
 
+    public static String FILEHOMELINUX = "/usr/local/webData";
+
+
     /**
      * 上传文件
      *
@@ -69,12 +71,13 @@ public class FileController {
             //处理文件名 "."+扩展名
             name = l + "." + FilenameUtils.getExtension(file.getOriginalFilename());
             //调用业务 文件拷贝
-            File newFile = new File(FILEHOME, name);
+            File newFile = new File(FILEHOMELINUX, name);
             file.transferTo(newFile);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-        return BaseResultModel.success(FILEURL + name);
+        //"http://192.168.158.130:9000/api/seeFile/"
+        return BaseResultModel.success(FILEURLLINUX + name);
     }
 
 
