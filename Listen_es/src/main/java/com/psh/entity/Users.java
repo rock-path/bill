@@ -8,12 +8,13 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import org.apache.ibatis.type.JdbcType;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 
 /**
- * 实体类
+ * 实体类,同时也做了mapping映射
  *
  * @author makejava
  * @since 2021-10-06 20:08:50
@@ -22,11 +23,11 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
 @ApiModel(value = "Users对象", description = "实体对象")
 //索引名，分片，副本
 @Document(indexName = "user",shards = 3,replicas = 1)
+
 public class Users {
-    /**
-     * 账号
-     */
-    private String id;
+
+    @Id
+    private Long id;
 
 
     /**

@@ -47,6 +47,7 @@ public class EsSpringDataController {
     @ApiOperation(value="创建索引")
     @GetMapping("/create_index")
     public BaseResultModel create(String index){
+//        elasticsearchOperations.indexOps()
         elasticsearchOperations.createIndex(index);
 //        elasticsearchOperations.putMapping(Users.class);
         return  BaseResultModel.success("创建成功");

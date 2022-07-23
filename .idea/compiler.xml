@@ -8,11 +8,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="system" />
-        <module name="Listen_es" />
         <module name="common" />
         <module name="eureka" />
+        <module name="Listen_es" />
         <module name="gateway" />
         <module name="Important-data" />
+        <module name="listen_kafka" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

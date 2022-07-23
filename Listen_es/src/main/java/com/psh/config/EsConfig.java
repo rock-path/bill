@@ -19,12 +19,6 @@ public class EsConfig extends AbstractElasticsearchConfiguration {
     @Value("${es.host}")
     private InetAddress host;
 
-    @Bean
-    public RestHighLevelClient getEs() {
-        return new RestHighLevelClient(
-                RestClient.builder(new HttpHost(host, port, "http")));
-    }
-
     @Override
     @Bean(destroyMethod = "close")
     public RestHighLevelClient elasticsearchClient() {

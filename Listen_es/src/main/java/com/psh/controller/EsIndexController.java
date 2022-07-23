@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
@@ -29,20 +30,10 @@ import java.util.Map;
 @Api(value="索引级别操作，相当于库、表,维护人:makejava",tags ={"索引级别操作，相当于库、表"})
 public class EsIndexController {
 
-    @Autowired
-    private EsConfig es;
-
-    /**
-     * 测试连接是否正常
-     */
-    @ApiOperation(value="测试连接是否正常")
-    @GetMapping("/test01")
-    public BaseResultModel get(){
-//        构建es对象
-        RestHighLevelClient re =es.getEs();
-        return  BaseResultModel.success();
-    }
-
+//    @Autowired
+//    private EsConfig es;
+    @Resource
+    private RestHighLevelClient re;
 
     /**
      * 创建索引
@@ -50,8 +41,6 @@ public class EsIndexController {
     @ApiOperation(value="创建索引")
     @GetMapping("/create_index")
     public BaseResultModel create(String index){
-        //获取es对象
-        RestHighLevelClient re =es.getEs();
         //创建索引
         CreateIndexRequest request =new CreateIndexRequest(index);
         try {
@@ -77,9 +66,6 @@ public class EsIndexController {
     @ApiOperation(value="查询索引")
     @GetMapping("/select_index")
     public BaseResultModel select(String index) throws Exception{
-        //获取es对象
-        RestHighLevelClient re =es.getEs();
-
         GetIndexRequest request =new GetIndexRequest(index);
         GetIndexResponse getIndexResponse = re.indices().get(request, RequestOptions.DEFAULT);
 //        Map<String, List<AliasMetadata>> aliases = getIndexResponse.getAliases();//user
@@ -97,7 +83,7 @@ public class EsIndexController {
     public BaseResultModel delete(String index) throws Exception{
         //获取es对象
         DeleteIndexRequest request =new DeleteIndexRequest(index);
-        AcknowledgedResponse delete = es.getEs().indices().delete(request, RequestOptions.DEFAULT);
+        AcknowledgedResponse delete = re.indices().delete(request, RequestOptions.DEFAULT);
         System.out.println(delete.toString());
         return  BaseResultModel.success();
     }

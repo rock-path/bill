@@ -4,209 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5aa026f-7cf8-4dfd-b373-d7ea30e65cae" name="Default Changelist" comment="重要数据加密">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5c811636-4d05-4248-b5f8-20b71c74ca3c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5c811636-4d05-4248-b5f8-20b71c74ca3c.xml" afterDir="false" />
+    <list default="true" id="a5aa026f-7cf8-4dfd-b373-d7ea30e65cae" name="Default Changelist" comment="冲突解决">
+      <change afterPath="$PROJECT_DIR$/listen_kafka/LICENSE.TXT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/listen_kafka/README.TXT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/listen_kafka/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/listen_kafka/src/main/java/com/psh/KafkaApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/listen_kafka/src/main/java/com/psh/config/MyMetaObjectHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/listen_kafka/src/main/java/com/psh/config/SwaggerConfigurer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/listen_kafka/src/main/java/com/psh/controller/KafkaProductionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/listen_kafka/src/main/java/com/psh/entity/Users.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/listen_kafka/src/main/java/com/psh/listen/KafkaConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/listen_kafka/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/listen_kafka/src/test/resources/TEST_RESOURCES_README.TXT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/listen_kafka/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/listen_kafka/target/test-classes/TEST_RESOURCES_README.TXT" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/9056786c-26c6-4183-b0eb-5649625237b5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9056786c-26c6-4183-b0eb-5649625237b5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Important-data/src/main/java/com/psh/controller/BillPasswordExtendController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Important-data/src/main/java/com/psh/controller/BillPasswordExtendController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Important-data/target/Important-data-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Important-data/target/Important-data-1.0.jar.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Important-data/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Important-data/target/classes/com/psh/ImportantDataApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Important-data/target/classes/com/psh/config/DruidConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Important-data/target/classes/com/psh/config/MyMetaObjectHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Important-data/target/classes/com/psh/config/MybatisPlusConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Important-data/target/classes/com/psh/config/RedisBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Important-data/target/classes/com/psh/config/RedisConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Important-data/target/classes/com/psh/config/SwaggerConfigurer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Important-data/target/classes/com/psh/controller/BillPasswordController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Important-data/target/classes/com/psh/entity/BillPassword.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Important-data/target/classes/com/psh/entity/request/ReqBillPasswordAdd.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Important-data/target/classes/com/psh/entity/request/ReqBillPasswordQuery.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Important-data/target/classes/com/psh/entity/request/ReqBillPasswordUpdate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Important-data/target/classes/com/psh/entity/response/ResBillPassword.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Important-data/target/classes/com/psh/entity/vo/BillPasswordEncryption.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Important-data/target/classes/com/psh/mapper/BillPasswordMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Important-data/target/classes/com/psh/service/BillPasswordService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Important-data/target/classes/com/psh/service/impl/BillPasswordServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Important-data/target/classes/com/psh/util/AESUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Important-data/target/classes/com/psh/util/EntityUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Important-data/target/classes/mapper/BillPasswordMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Important-data/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Important-data/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Important-data/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Listen_es/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Listen_es/target/classes/com/psh/EsApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Listen_es/target/classes/com/psh/config/DruidConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Listen_es/target/classes/com/psh/config/EsConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Listen_es/target/classes/com/psh/config/MyMetaObjectHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Listen_es/target/classes/com/psh/config/MybatisPlusConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Listen_es/target/classes/com/psh/config/RedisBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Listen_es/target/classes/com/psh/config/RedisConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Listen_es/target/classes/com/psh/config/SwaggerConfigurer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Listen_es/target/classes/com/psh/config/WebConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Listen_es/target/classes/com/psh/controller/EsDocController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Listen_es/target/classes/com/psh/controller/EsIndexController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Listen_es/target/classes/com/psh/controller/EsSpringDataController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Listen_es/target/classes/com/psh/entity/Users.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Listen_es/target/classes/com/psh/service/EsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Listen_es/target/classes/com/psh/service/impl/EsServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/common.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/psh/hik/common/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/psh/hik/common/Constant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/psh/hik/common/Constant.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/psh/hik/common/DataSourceEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/psh/hik/common/ResultStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/psh/hik/common/RoleInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/psh/hik/common/UserInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/psh/hik/domain/BaseException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/psh/hik/domain/BaseResultModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/psh/hik/entity/BaseEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/psh/hik/util/RedisSync.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/psh/hik/util/UserContextHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/common-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka/eureka.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka/target/classes/com/psh/EurekaApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/gateway.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/target/classes/com/psh/GateWayApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/target/classes/com/psh/config/RedisConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/target/classes/com/psh/filter/MyGlobalFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/target/classes/com/psh/service/OpenFeignSystem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/target/classes/com/psh/service/impl/OpenFeignSystemImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/system/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/src/main/java/com/psh/config/FilePathConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/system/src/main/java/com/psh/config/FilePathConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/src/main/java/com/psh/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/system/src/main/java/com/psh/controller/FileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/system.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/bootstrap.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/SystemApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/config/DruidConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/config/ExcelListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/config/FilePathConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/config/MyMetaObjectHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/config/MybatisPlusConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/config/RedisBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/config/RedisConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/config/SpringApplicationUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/config/SwaggerConfigurer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/config/WebConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/controller/BillIncomeController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/controller/BillLogResourceController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/controller/BillLogsController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/controller/BillRecordController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/controller/BillRequestUrlController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/controller/BillTaskTimeController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/controller/BillTypeController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/controller/FileController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/controller/ImportantEventsController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/BillIncome.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/BillLogResource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/BillLogs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/BillRecord.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/BillRequestUrl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/BillTaskTime.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/BillType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/ImportantEvents.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/TscmUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/request/ReqBillIncomeAdd.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/request/ReqBillIncomeQuery.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/request/ReqBillIncomeUpdate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/request/ReqBillLogResourceAdd.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/request/ReqBillLogResourceQuery.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/request/ReqBillLogResourceUpdate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/request/ReqBillLogsAdd.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/request/ReqBillLogsQuery.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/request/ReqBillLogsUpdate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/request/ReqBillRecordAdd.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/request/ReqBillRecordQuery.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/request/ReqBillRecordUpdate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/request/ReqBillRequestUrlAdd.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/request/ReqBillRequestUrlQuery.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/request/ReqBillRequestUrlUpdate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/request/ReqBillTaskTimeAdd.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/request/ReqBillTaskTimeQuery.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/request/ReqBillTaskTimeUpdate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/request/ReqBillTypeAdd.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/request/ReqBillTypeQuery.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/request/ReqBillTypeUpdate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/request/ReqImportantEventsAdd.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/request/ReqImportantEventsQuery.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/request/ReqImportantEventsUpdate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/request/ReqTestAdd.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/request/ReqTestQuery.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/request/ReqTestUpdate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/request/ReqTscmUserAdd.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/request/ReqTscmUserQuery.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/request/ReqTscmUserUpdate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/response/ResBillIncome.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/response/ResBillLogResource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/response/ResBillLogs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/response/ResBillRecord.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/response/ResBillRequestUrl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/response/ResBillTaskTime.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/response/ResBillType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/response/ResImportantEvents.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/response/ResTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/response/ResTscmUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/entity/vo/RecordImport.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/filter/SysFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/log/EventUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/log/FiledColumn.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/log/LogConstant.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/log/LogResource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/log/Logs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/log/LogsInterceptor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/log/LogsUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/log/NetworkUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/log/RequestUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/mapper/BillIncomeMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/mapper/BillLogResourceMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/mapper/BillLogsMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/mapper/BillRecordMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/mapper/BillRequestUrlMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/mapper/BillTaskTimeMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/mapper/BillTypeMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/mapper/ImportantEventsMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/mapper/TscmUserMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/monitor/RedisKeyExpirationListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/monitor/RedisListenerConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/scheduledTask/CompleteScheduleConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/scheduledTask/ScheduledTask.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/service/BillIncomeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/service/BillLogResourceService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/service/BillLogsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/service/BillRecordService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/service/BillRequestUrlService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/service/BillTaskTimeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/service/BillTypeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/service/ImportantEventsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/service/TscmUserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/service/impl/BillIncomeServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/service/impl/BillLogResourceServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/service/impl/BillLogsServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/service/impl/BillRecordServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/service/impl/BillRequestUrlServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/service/impl/BillTaskTimeServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/service/impl/BillTypeServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/service/impl/ImportantEventsServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/service/impl/TscmUserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/util/ExcelUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/util/Export.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/com/psh/util/IdGeneratorUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/mapper/BillIncomeMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/mapper/BillLogResourceMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/mapper/BillLogsMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/mapper/BillRecordMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/mapper/BillRequestUrlMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/mapper/BillTaskTimeMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/mapper/BillTypeMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/mapper/ImportantEventsMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/target/classes/sql/sql.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Important-data/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Important-data/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Important-data/src/main/java/com/psh/controller/BillPasswordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Important-data/src/main/java/com/psh/controller/BillPasswordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Listen_es/src/main/java/com/psh/config/EsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Listen_es/src/main/java/com/psh/config/EsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Listen_es/src/main/java/com/psh/controller/EsDocController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Listen_es/src/main/java/com/psh/controller/EsDocController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Listen_es/src/main/java/com/psh/controller/EsIndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Listen_es/src/main/java/com/psh/controller/EsIndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Listen_es/src/main/java/com/psh/controller/EsSpringDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Listen_es/src/main/java/com/psh/controller/EsSpringDataController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Listen_es/src/main/java/com/psh/entity/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/Listen_es/src/main/java/com/psh/entity/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Listen_es/src/main/java/com/psh/service/impl/EsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Listen_es/src/main/java/com/psh/service/impl/EsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Listen_es/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Listen_es/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,46 +76,49 @@
     <option name="showMembers" value="true" />
     <option name="sortByType" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/webProject/bill/Important-data/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;a05fc1e7ef6b8043c003b3a7f056df62&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "E:/webProject/bill_back/listen_kafka/src/main/java/com/psh",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "spring.configuration.checksum": "2883dc5cd6b328421f7d968993ec7a7d"
   }
-}</component>
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\webProject\bill_back\listen_kafka\src\main\java\com\psh" />
+      <recent name="E:\webProject\bill_back\listen_kafka\src\main\resources" />
       <recent name="E:\webProject\bill\Important-data\src\main\java\com\psh" />
       <recent name="E:\webProject\bill\Important-data\src\main" />
       <recent name="E:\webProject\bill\Important-data\src\main\resources" />
-      <recent name="E:\webProject\bill\Listen_es\src\main\java\com\psh" />
-      <recent name="E:\webProject\bill\Listen_es\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\webProject\bill\Important-data\src\main\resources\mapper" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.psh.entity.vo" />
-      <recent name="com.psh.common" />
-      <recent name="com.psh.filter" />
+      <recent name="com.psh.listen" />
       <recent name="com.psh.config" />
       <recent name="com.psh.entity" />
+      <recent name="com.psh.controller" />
+      <recent name="com.psh.entity.vo" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -298,7 +128,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ImportantDataApp">
+  <component name="RunManager" selected="Spring Boot.KafkaApplication">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -310,8 +140,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BillPasswordExtendController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.psh.controller.BillPasswordExtendController" />
+    <configuration name="BillPasswordController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.psh.controller.BillPasswordController" />
       <module name="Important-data" />
       <extension name="coverage">
         <pattern>
@@ -323,15 +153,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="EsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="Listen_es" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.psh.EsApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.psh.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -369,6 +193,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="KafkaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="listen_kafka" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.psh.KafkaApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.psh.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SystemApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="system" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.psh.SystemApp" />
@@ -384,11 +221,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.KafkaApplication" />
         <item itemvalue="Spring Boot.SystemApp" />
         <item itemvalue="Spring Boot.ImportantDataApp" />
-        <item itemvalue="Application.BillPasswordExtendController" />
-        <item itemvalue="Spring Boot.EsApplication" />
         <item itemvalue="Spring Boot.GateWayApplication" />
+        <item itemvalue="Application.BillPasswordController" />
       </list>
     </recent_temporary>
   </component>
@@ -447,7 +284,19 @@
       <workItem from="1653788217113" duration="22106000" />
       <workItem from="1654089684456" duration="688000" />
       <workItem from="1654237850771" duration="6600000" />
-      <workItem from="1655044945160" duration="536000" />
+      <workItem from="1655044945160" duration="948000" />
+      <workItem from="1655129707211" duration="1262000" />
+      <workItem from="1655302922245" duration="650000" />
+      <workItem from="1655474777980" duration="1264000" />
+      <workItem from="1655518127489" duration="4314000" />
+      <workItem from="1655731131957" duration="3971000" />
+      <workItem from="1655903289770" duration="972000" />
+      <workItem from="1655906791826" duration="1945000" />
+      <workItem from="1655995398720" duration="725000" />
+      <workItem from="1656162710093" duration="616000" />
+      <workItem from="1656235682963" duration="2946000" />
+      <workItem from="1657959393411" duration="1871000" />
+      <workItem from="1658238649444" duration="4154000" />
     </task>
     <task id="LOCAL-00001" summary="项目搭建">
       <created>1643289500257</created>
@@ -498,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653743618131</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="冲突解决">
+      <created>1655045577061</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1655045577061</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -521,15 +377,37 @@
     <MESSAGE value="项目搭建02" />
     <MESSAGE value="日志系统" />
     <MESSAGE value="重要数据加密" />
-    <option name="LAST_COMMIT_MESSAGE" value="重要数据加密" />
+    <MESSAGE value="冲突解决" />
+    <option name="LAST_COMMIT_MESSAGE" value="冲突解决" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <breakpoint enabled="true" type="java-exception">
+          <dependency id="0" />
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <dependency master-id="0" />
+          <properties class="java.lang.NoClassDefFoundError" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Important-data/src/main/java/com/psh/service/impl/BillPasswordServiceImpl.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Important-data/src/main/java/com/psh/service/impl/BillPasswordServiceImpl.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Important-data/src/main/java/com/psh/service/impl/BillPasswordServiceImpl.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

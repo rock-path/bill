@@ -14,6 +14,7 @@
         <module>gateway</module>
         <module>Listen_es</module>
         <module>Important-data</module>
+        <module>listen_kafka</module>
     </modules>
 
     <packaging>pom</packaging>

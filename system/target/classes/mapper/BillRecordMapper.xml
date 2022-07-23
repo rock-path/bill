@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.psh.mapper.BillRecordMapper">
+
+    <sql id="table_field">
+        id
+        , t_id, r_id, r_time, r_number, desc, deleted, ctime, crname, mtime, chname, session_id    </sql>
+    <!--分页查询-->
+    <select id="listByPage" resultType="com.psh.entity.response.ResBillRecord">
+        select * from bill_record
+        where deleted = 0
+        <if test="null != param.tId and ''!= param.tId">
+            and t_id like '%'||#{param.tId}||'%'
+        </if>
+        <if test="null != param.rId and ''!= param.rId">
+            and r_id like '%'||#{param.rId}||'%'
+        </if>
+        <if test="null != param.rTime and ''!= param.rTime">
+            and r_time like '%'||#{param.rTime}||'%'
+        </if>
+        <if test="null != param.rNumber and ''!= param.rNumber">
+            and r_number like '%'||#{param.rNumber}||'%'
+        </if>
+        <if test="null != param.desc and ''!= param.desc">
+            and descd like '%'||#{param.desc}||'%'
+        </if>
+        <if test="null != param.sessionId and ''!= param.sessionId">
+            and session_id like '%'||#{param.sessionId}||'%'
+        </if>
+
+    </select>
+</mapper>
